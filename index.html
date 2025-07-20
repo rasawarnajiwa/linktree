@@ -1,26 +1,54 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rasa Warna Jiwa</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;500&display=swap" rel="stylesheet" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rasa Warna Jiwa – Linktree" />
+  <meta property="og:description" content="Tempatku mengalirkan rasa, menyimpan warna, dan menyapa jiwa." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/rasawarnajiwa/linktree/main/WhatsApp%20Image%202025-07-19%20at%2014.45.22.jpeg" />
+  <meta property="og:url" content="https://rasawarnajiwa.github.io/linktree/" />
+  <meta name="theme-color" content="#fdf6ec" />
+
+  <!-- Style -->
   <style>
+    :root {
+      --bg: linear-gradient(#fffaf3, #fdf6ec);
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --text: #5a463a;
+      --accent: #ffe9ca;
+      --hover: #fff4e3;
+    }
+
+    [data-theme="dark"] {
+      --bg: #1e1b18;
+      --card-bg: #2a2420;
+      --text: #f2e7dc;
+      --accent: #6b4c3c;
+      --hover: #3d2e26;
+    }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(#fffaf3, #fdf6ec);
+      background: var(--bg);
       display: flex;
       flex-direction: column;
       align-items: center;
       padding: 40px 20px;
-      color: #5a463a;
+      color: var(--text);
+      transition: background 0.3s, color 0.3s;
     }
 
     .container {
       width: 100%;
       max-width: 500px;
-      background: rgba(255, 255, 255, 0.8);
+      background: var(--card-bg);
       border-radius: 20px;
       box-shadow: 0 0 10px rgba(192, 157, 108, 0.2);
       padding: 30px;
@@ -39,8 +67,15 @@
     h1 {
       font-family: 'Playfair Display', serif;
       font-size: 26px;
-      color: #7a5435;
+      color: var(--text);
       margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-style: italic;
+      font-size: 14px;
+      margin-bottom: 20px;
+      color: var(--text);
     }
 
     .linktree a {
@@ -49,43 +84,69 @@
       padding: 14px;
       border-radius: 12px;
       text-decoration: none;
-      background: #fff4e3;
-      color: #5f4633;
+      background: var(--hover);
+      color: var(--text);
       font-weight: 500;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
       transition: all 0.3s ease;
     }
 
     .linktree a:hover {
-      background: #ffe9ca;
+      background: var(--accent);
       transform: translateY(-2px);
-    }
-
-    .footer {
-      margin-top: 30px;
-      font-size: 12px;
-      color: #9e7e5c;
     }
 
     .subscribe-box {
       margin-top: 30px;
     }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: var(--text);
+    }
+
+    .footer-icons {
+      margin-top: 15px;
+    }
+
+    .footer-icons a {
+      margin: 0 10px;
+      color: var(--text);
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .toggle-theme {
+      margin-top: 20px;
+      font-size: 14px;
+      cursor: pointer;
+      color: var(--text);
+      background: none;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
   </style>
+
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a7e8ffbdce.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
   <div class="container">
-    <img src="https://raw.githubusercontent.com/rasawarnajiwa/linktree/main/WhatsApp%20Image%202025-07-19%20at%2014.45.22.jpeg" alt="Profil Farida" class="profile-img">
+    <img src="https://raw.githubusercontent.com/rasawarnajiwa/linktree/main/WhatsApp%20Image%202025-07-19%20at%2014.45.22.jpeg" alt="Profil Farida" class="profile-img" />
+
     <h1>Rasa Warna Jiwa</h1>
-    <p><em>Tempatku mengalirkan rasa, menyimpan warna, dan menyapa jiwa</em></p>
+    <div class="tagline">Tempatku mengalirkan rasa, menyimpan warna, dan menyapa jiwa</div>
 
     <div class="linktree">
-      <a href="https://rasawarnajiwa.blogspot.com/" target="_blank">🌿 Blogspot</a>
-      <a href="https://rasawarnajiwa.github.io/" target="_blank">🌐 Halaman Utama (GitHub Pages)</a>
-      <a href="https://instagram.com/rasawarnajiwa" target="_blank">📷 Instagram</a>
-      <a href="mailto:emailkamu@email.com">✉️ Kontak Email</a>
+      <a href="https://rasawarnajiwa.blogspot.com/" target="_blank">🌿 Blog</a>
+      <a href="https://rasawarnajiwa.github.io/" target="_blank">🌐 Halaman Utama (GitHub)</a>
+      <a href="https://instagram.com/rasawarna" target="_blank">📷 Instagram</a>
+      <a href="mailto:farida584@gmail.com">✉️ Kirim Email</a>
     </div>
 
-    <!-- SUBSCRIBE BOX -->
     <div class="subscribe-box">
       <iframe src="https://farida451663.substack.com/embed" 
               width="100%" 
@@ -96,7 +157,34 @@
       </iframe>
     </div>
 
-    <div class="footer">© 2025 Farida Budiarti | Rasa Warna Jiwa</div>
+    <button class="toggle-theme" onclick="toggleTheme()">🌙 Toggle Dark Mode</button>
+
+    <div class="footer">
+      <div>© 2025 Farida Budiarti | Rasa Warna Jiwa</div>
+      <div class="footer-icons">
+        <a href="https://github.com/rasawarnajiwa" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://farida451663.substack.com" target="_blank" title="Substack"><i class="fas fa-envelope-open-text"></i></a>
+        <a href="https://instagram.com/rasawarnajiwa" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
   </div>
+
+  <script>
+    function toggleTheme() {
+      const currentTheme = document.documentElement.getAttribute("data-theme");
+      document.documentElement.setAttribute("data-theme", currentTheme === "dark" ? "light" : "dark");
+    }
+  </script>
+
+  <!-- Optional Google Analytics -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+  -->
 </body>
 </html>
